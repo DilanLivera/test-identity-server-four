@@ -1,0 +1,29 @@
+﻿@model List<WeatherForecast>
+
+@{
+    ViewBag.Title = "WeatherForecasts";
+    Layout = "_Layout";
+}
+
+<h3>Weather Forecasts</h3>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Summary</th>
+            <th scope="col">Celsius</th>
+            <th scope="col">Fahrenheit</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Date</td>
+            <td>@item.Summary</td>
+            <td>@item.TemperatureC</td>
+            <td>@item.TemperatureF</td>
+        </tr>
+    }
+</table>
